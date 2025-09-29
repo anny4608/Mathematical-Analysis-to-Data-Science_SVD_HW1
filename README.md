@@ -6,7 +6,7 @@ This project is a homework assignment for a Singular Value Decomposition (SVD) c
 
 The main objectives of this assignment are:
 
-1.  To use the image `matrixzimg.jpg` for SVD analysis.
+1.  To use the image `matrixaimg.jpg` for SVD analysis.
 2.  To empirically prove the property that the 2-norm of the error matrix (`||A - Ak||_2`) is equal to the `(k+1)`-th singular value (`sigma_{k+1}`).
 3.  To decompose the image using SVD and reconstruct it with different numbers of singular values (`k`).
 4.  To calculate and analyze the following metrics for different `k` values:
