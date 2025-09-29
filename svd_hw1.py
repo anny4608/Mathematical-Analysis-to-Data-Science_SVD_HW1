@@ -144,22 +144,32 @@ garyResult = np.array(results)
 
 ## Plotting Results ##
 def showLinear(table, resize):
-   plt.figure(figsize=(24,8),dpi=50,linewidth = 2)
-   # plt.rcParams['font.sans-serif'] = ['Taipei Sans TC Beta'] # This might cause a warning if the font is not installed
-   plt.xticks(fontsize=20)
-   plt.yticks(fontsize=20)
-   plt.xlabel("k_value", fontsize=30, labelpad = 15)
-   
-   plt.subplot(1,2,1)
-   plt.plot(table[:,0], table[:,6],'s-',color = 'red', label="SS")
-   plt.plot(table[:,0], table[:,7]/resize,'s-',color = 'skyblue', label=f"MSE/{resize}")
-   plt.legend(loc = "best", fontsize=20)
+   fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(24,8),dpi=50,linewidth = 2) # Create figure and two subplots
 
-   plt.subplot(1,2,2)
-   plt.plot(table[:,0], table[:,4],'s-',color = 'green', label="SIZE")
-   plt.plot(table[:,0], table[:,8],'s-',color = 'blue', label="PSNR")
-   plt.legend(loc = "best", fontsize=20)
+   # First subplot
+   ax1.plot(table[:,0], table[:,6],'s-',color = 'red', label="SS")
+   ax1.plot(table[:,0], table[:,7]/resize,'s-',color = 'skyblue', label=f"MSE/{resize}")
+   ax1.legend(loc = "best", fontsize=20)
+   ax1.set_xlim(0, 80) # Set x-limit for left plot
+   ax1.set_ylim(0, 80) # Set y-limit for left plot
+   ax1.set_xlabel("k value", fontsize=30, labelpad = 15)
+   ax1.set_ylabel("SS / MSE", fontsize=30, labelpad = 15)
+   ax1.tick_params(axis='x', labelsize=20)
+   ax1.tick_params(axis='y', labelsize=20)
 
+
+   # Second subplot
+   ax2.plot(table[:,0], table[:,4],'s-',color = 'green', label="SIZE")
+   ax2.plot(table[:,0], table[:,8],'s-',color = 'blue', label="PSNR")
+   ax2.legend(loc = "best", fontsize=20)
+   ax2.set_xlim(0, 1200) # Set x-limit for right plot
+   ax2.set_ylim(0, 200) # Set y-limit for right plot
+   ax2.set_xlabel("k value", fontsize=30, labelpad = 15)
+   ax2.set_ylabel("SIZE / PSNR", fontsize=30, labelpad = 15)
+   ax2.tick_params(axis='x', labelsize=20)
+   ax2.tick_params(axis='y', labelsize=20)
+
+   plt.tight_layout() # Adjust layout to prevent overlapping
    plt.savefig('svd_hw1_linear_plots.png')
    plt.show()
 
