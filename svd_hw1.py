@@ -68,16 +68,12 @@ def ss(originalSize, sampleSize):
         return 0.0
     return (1 - sampleSize / originalSize) * 100
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 2fae496f30cf45800a264073140ef51d55b162d5
 ## SVD 分解 ##
 def svd_restore(image, k):
 
     # 對圖形矩陣做 SVD 分解
     u, sigma, v = np.linalg.svd(image, full_matrices=False)
-<<<<<<< HEAD
     
     # 避免 K 值超出 sigma 長度
     k = min(len(sigma), k)
@@ -96,30 +92,6 @@ def svd_restore(image, k):
     Ak = np.clip(Ak, 0, 255)
     Ak = np.rint(Ak).astype(np.uint8)
     
-=======
-
-    # 避免 K 值超出 sigma 長度
-    k = min(len(sigma), k)
-
-    # 依照 k 值，得到新的圖形矩陣
-    Ak = np.dot(u[:,:k], np.dot(np.diag(sigma[:k]), v[:k,:]))
-
-    # 計算 2-norm of error
-    norm_val = norm2(image, Ak)
-
-    # (k+1)-th singular value
-    sigma_kp1 = sigma[k] if k < len(sigma) else 0.0
-
-    # 計算 mse
-    mse_val = mse(image, Ak)
-
-    # Clip values to be in the valid range for images [0, 255]
-    Ak = np.clip(Ak, 0, 255)
-
-    # 四捨五入取整數，轉型為圖片所需的 uint8
-    Ak = np.rint(Ak).astype(np.uint8)
-
->>>>>>> 2fae496f30cf45800a264073140ef51d55b162d5
     return Ak, sigma, norm_val, sigma_kp1, mse_val
 
 ## Main Execution Block ##
