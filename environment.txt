@@ -1,0 +1,6 @@
+numpy==2.1.2
+matplotlib==3.10.6
+pillow==11.3.0
+pandas==2.3.2
+dataframe_image==0.2.7
+opencv-python==4.12.0.88
