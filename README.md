@@ -46,17 +46,6 @@ To run this project, you need to have Python and `pip` installed.
     python K_select.py
     ```
 
-## Output
-
-The script will generate the following output files:
-
-*   `svd_hw1_channels.png`: A plot showing the original image and its R, G, B channels.
-*   `svd_hw1_compressed_images.png`: A plot showing the reconstructed images for different `k` values.
-*   `svd_hw1_linear_plots.png`: Plots showing the relationship between `k` and various metrics (PSNR, MSE, etc.).
-*   `k_vs_psnr_cr.png`: A plot showing the relationship between PSNR and Compression Ratio vs. `k`.
-*   `svd_hw1_results_table.png`: An image of the final table containing all the calculated metrics.
-*   'svd_analysis_results.png' : An image by the different K_select method .
-*   The script will also print the results table to the console.
 
 ## Code Description
 
@@ -80,3 +69,15 @@ The main script `K_select.py` performs the following steps:
     *   The relationship between `k`, PSNR, and CR.
     *   The distribution of singular values.
     *   A comparison of the original and compressed images.
+
+## Output
+
+The script will generate the following output files:
+
+*   `svd_hw1_channels.png`: A plot showing the original image and its R, G, B channels.
+*   `svd_hw1_compressed_images.png`: A plot showing the reconstructed images for different `k` values.
+*   `svd_hw1_linear_plots.png`: Plots showing the relationship between `k` and various metrics (PSNR, MSE, etc.).
+*   `k_vs_psnr_cr.png`: A plot showing the relationship between PSNR and Compression Ratio vs. `k`.
+*   `svd_hw1_results_table.png`: An image of the final table containing all the calculated metrics.
+*   'svd_analysis_results.png' : An image by the different K_select method .
+*   The script will also print the results table to the console.
