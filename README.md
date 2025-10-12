@@ -44,6 +44,7 @@ To run this project, you need to have Python and `pip` installed.
     # Execute the main script
     python svd_hw1.py
     python K_select.py
+    python SVD_Color.py
     ```
 
 
@@ -69,6 +70,19 @@ The main script `K_select.py` performs the following steps:
     *   The relationship between `k`, PSNR, and CR.
     *   The distribution of singular values.
     *   A comparison of the original and compressed images.
+
+The main script `svd_hw1.py` performs the following steps:
+
+1.  Loads the `matrixaimg.jpg` image.
+2.  Defines several functions to calculate the required metrics (MSE, PSNR, etc.).
+3.  Defines a function to perform SVD and reconstruct the image for a given `k`.
+4.  Loops through a range of `k` values, and for each `k`:
+    *   Reconstructs the image.
+    *   Calculates all the metrics.
+    *   Saves the reconstructed image.
+5.  Generates and saves plots to visualize the results.
+6.  Creates a pandas DataFrame to display the results in a table, and saves the table as an image.
+
 
 ## Output
 
