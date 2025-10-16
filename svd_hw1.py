@@ -1,6 +1,3 @@
-import os
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = r'C:\Users\anny4\OneDrive\桌面\SVD_HW1TEST\venv\Lib\site-packages\PyQt5\Qt5\plugins\platforms'
-
 ## import 套件
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,7 +6,7 @@ import cv2
 import math
 import pandas as pd
 import dataframe_image as dfi
-
+import os
 # Create image directory if it doesn't exist
 os.makedirs("./image", exist_ok=True)
 
