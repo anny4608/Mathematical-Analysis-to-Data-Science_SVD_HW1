@@ -41,16 +41,17 @@ To run this project, you need to have Python and `pip` installed.
 
 3.  **Run the script:**
     ```bash
-    # Execute the main script
+    # Execute the main script(You can run all or any of the programs individually:D)
     python svd_hw1.py
     python K_select.py
     python SVD_Color.py
+    Python K_select_Color.py
     ```
 
 
 ## Code Description
 
-The main script `svd_hw1.py` performs the following steps:
+The main script `svd_hw1.py` and  `SVD_Color.py`  performs the following steps:
 
 1.  Loads the `matrixaimg.jpg` image and converts it to grayscale.
 2.  Defines several functions to calculate the required metrics (MSE, PSNR, etc.).
@@ -61,27 +62,18 @@ The main script `svd_hw1.py` performs the following steps:
     *   Saves the reconstructed image.
 5.  Generates and saves plots to visualize the results.
 6.  Creates a pandas DataFrame to display the results in a table, and saves the table as an image.
+7.  The color version performs three channels (R, G, B)
 
 
-The main script `K_select.py` performs the following steps:
+The main script `K_select.py`and `K_select_Color.py` performs the following steps:
 
 1.  Compressed Images:** The `image/` directory will contain the compressed versions of the original image, named according to the `k` value used.
 2.  Analysis Plots:** The `.png` files provide visualizations of the analysis, including:
     *   The relationship between `k`, PSNR, and CR.
     *   The distribution of singular values.
     *   A comparison of the original and compressed images.
+3.  The color version performs three channels (R, G, B)
 
-The main script `svd_hw1.py` performs the following steps:
-
-1.  Loads the `matrixaimg.jpg` image.
-2.  Defines several functions to calculate the required metrics (MSE, PSNR, etc.).
-3.  Defines a function to perform SVD and reconstruct the image for a given `k`.
-4.  Loops through a range of `k` values, and for each `k`:
-    *   Reconstructs the image.
-    *   Calculates all the metrics.
-    *   Saves the reconstructed image.
-5.  Generates and saves plots to visualize the results.
-6.  Creates a pandas DataFrame to display the results in a table, and saves the table as an image.
 
 
 ## Output
